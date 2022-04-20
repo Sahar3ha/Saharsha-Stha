@@ -305,8 +305,7 @@ class Per{
         JOptionPane.showMessageDialog(null,total);
         JOptionPane.showMessageDialog(null,Percentage);
         JOptionPane.showMessageDialog(null,Grade);
-
-
+        System.exit(0);
 
 
     }
@@ -321,6 +320,7 @@ class In{
         int d = a*b;
         JOptionPane.showMessageDialog(null,c);
         JOptionPane.showMessageDialog(null,d);
+        System.exit(0);
     }
 }
 
@@ -334,6 +334,7 @@ class Int{
         int e = c/d;
         JOptionPane.showMessageDialog(null,c+"\n"+d+"\n"+e);
 
+        System.exit(0);
     }
 }
 class Rect{
@@ -343,7 +344,10 @@ class Rect{
         double area = len*bre;
         int a= (int) area;
         JOptionPane.showMessageDialog(null,"The are of rectangle "+a);
+
+        System.exit(0);
     }
+
 }
 
 class Info{
@@ -353,6 +357,7 @@ class Info{
         String interest= JOptionPane.showInputDialog("Enter address: ");
         JOptionPane.showMessageDialog(null,"My name is "+name+"and my roll number is "+roll_no+".My field of interest are "+interest);
 
+        System.exit(0);
     }
 }
 
@@ -362,6 +367,7 @@ class Squares{
         int s= sq^2;
         JOptionPane.showMessageDialog(null,s);
 
+        System.exit(0);
     }
 }
 
@@ -372,6 +378,7 @@ class T{
 
         float ar= (a*b)/2;
         JOptionPane.showMessageDialog(null,ar);
+        System.exit(0);
     }
 }
 
@@ -380,6 +387,7 @@ class C{
         int a = Integer.parseInt(JOptionPane.showInputDialog("Enter: "));
         int b = a^3;
         JOptionPane.showMessageDialog(null,b);
+        System.exit(0);
     }
 }
 
@@ -390,6 +398,7 @@ class Cu{
         int c = Integer.parseInt(JOptionPane.showInputDialog("Enter hei: "));
         float vol = a*b*c;
         JOptionPane.showMessageDialog(null,vol);
+        System.exit(0);
     }
 }
 
@@ -400,7 +409,7 @@ class S{
         int c = Integer.parseInt(JOptionPane.showInputDialog("Enter rate: "));
         float si = (a*b*c)/100;
         JOptionPane.showMessageDialog(null,si);
-
+        System.exit(0);
     }
 }
 
@@ -410,7 +419,7 @@ class H{
         int b = a^2;
         JOptionPane.showMessageDialog(null,b);
 
-
+        System.exit(0);
     }
 }
 
@@ -420,7 +429,7 @@ class N{
         int b = Integer.parseInt(JOptionPane.showInputDialog("Enter b: "));
         JOptionPane.showMessageDialog(null,a+b);
 
-
+        System.exit(0);
     }
 }
 
@@ -430,10 +439,32 @@ class E{
         int b = Integer.parseInt(JOptionPane.showInputDialog("Enter 2: "));
         int c = Integer.parseInt(JOptionPane.showInputDialog("Enter 3: "));
         String d;
-        d = (a==b)&&(b==c)&&c==a);
-
+        d = (a==b&&a==c&&b==c)?"All are equal":
+                ((a==b||a==c||b==c)?"Only two are equal":"No number are equal.");
+        System.exit(0);
 
 
     }
 }
 
+class F{
+    public static void main(String[] args) {
+        int a = Integer.parseInt(JOptionPane.showInputDialog("Enter a: "));
+        int b = Integer.parseInt(JOptionPane.showInputDialog("Enter b: "));
+        Boolean result = (Boolean) (a<50&&a<b);
+        JOptionPane.showMessageDialog(result);
+        System.exit(0);
+    }
+}
+
+class G{
+    public static void main(String[] args) {
+        int a = Integer.parseInt(JOptionPane.showInputDialog("Enter math: "));
+        int b = Integer.parseInt(JOptionPane.showInputDialog("Enter eng: "));
+        int c = Integer.parseInt(JOptionPane.showInputDialog("Enter sci: "));
+        int total = a+b+c;
+        int per = total/3;
+        JOptionPane.showMessageDialog(null,"The total is "+total+"\nThe per is "+per);
+
+    }
+}
